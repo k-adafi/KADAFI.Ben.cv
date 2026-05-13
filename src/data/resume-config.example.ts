@@ -258,6 +258,8 @@ export const resumeConfig: ResumeConfig = {
     },
   ],
 
+  experiences_association: [],
+
   // ===== PROJECTS (optional) =====
   projects: [
     {
