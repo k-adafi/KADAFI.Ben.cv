@@ -76,7 +76,7 @@ function SidebarPhoto({ photo, name, emoji }: { photo?: string; name: string; em
 
 export function Sidebar() {
   const { resolve } = useTranslation()
-  const { personal, contact, skills, hobbies, labels } = resumeConfig
+  const { personal, contact, skills, hobbies, experiences_association, labels } = resumeConfig
 
   return (
     <div className="md:w-[38%] bg-gradient-to-b from-resume-sidebar-from to-resume-sidebar-to p-8">
@@ -137,6 +137,21 @@ export function Sidebar() {
           ))}
         </div>
       </SidebarSection>
+
+      {/* AssociationEngagement */}
+      {experiences_association && experiences_association.length > 0 && labels.sections.experiences_association && (
+        <SidebarSection title={resolve(labels.sections.experiences_association)}>
+          <div className="grid grid-cols-2 gap-3">
+            {experiences_association.map((association, i) => (
+              <div key={`${resolve(association.role)}-${i}`}>
+                <p className="font-medium text-sm text-resume-text">{resolve(association.period)}</p>
+                <p className="font-medium text-sm text-resume-text">{resolve(association.role)}</p>
+                <p className="font-medium text-sm text-resume-text">{resolve(association.company)}</p>
+              </div>
+            ))}
+          </div>
+        </SidebarSection>
+      )}
 
       {/* Hobbies */}
       {hobbies && hobbies.length > 0 && labels.sections.hobbies && (

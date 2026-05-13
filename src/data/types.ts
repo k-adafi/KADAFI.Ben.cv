@@ -54,6 +54,27 @@ export interface Experience {
   }
 }
 
+export interface ExperienceAssociation {
+  id: string
+  company: LocalizedString
+  role: LocalizedString
+  type?: LocalizedString
+  period: LocalizedString
+  description: LocalizedString
+  techs: (TechName | (string & {}))[]
+  isHighlighted?: boolean
+  subItem?: {
+    title: LocalizedString
+    description: LocalizedString
+  }
+  details?: {
+    context: LocalizedString
+    tasks?: LocalizedStringArray
+    training?: LocalizedStringArray
+    env: LocalizedString
+  }
+}
+
 // ===== PROJECTS =====
 
 export interface Project {
@@ -115,6 +136,7 @@ export interface ResumeLabels {
     education: LocalizedString
     projects?: LocalizedString
     hobbies?: LocalizedString
+    experiences_association?: LocalizedString
   }
   experience: {
     mainTasks: LocalizedString
@@ -153,6 +175,7 @@ export interface ResumeConfig {
   contact: ContactItem[]
   skills: SkillCategory[]
   experiences: Experience[]
+  experiences_association: ExperienceAssociation[]
   education: Education[]
   projects?: Project[]
   hobbies?: Hobby[]

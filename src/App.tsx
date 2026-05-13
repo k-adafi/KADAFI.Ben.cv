@@ -1,14 +1,13 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { LanguageProvider } from '@/lib/i18n'
 import { ThemeProvider, useTheme } from '@/lib/theme'
 import { Resume } from '@/components/Resume'
 import { presets } from '@/data/presets'
 import type { PresetName } from '@/data/types'
 import { resumeConfig } from '@/data/resume-config'
+import { motion } from 'framer-motion';
+import { DownLoadIcon } from './components/icons'
 
-const Agentation = lazy(() =>
-  import('agentation').then((m) => ({ default: m.Agentation }))
-)
 
 /**
  * Sets document title and meta description at runtime.
@@ -90,7 +89,14 @@ export default function App() {
         <>
           <DevPresetSelector />
           <Suspense>
-            <Agentation />
+            <motion.div className="fixed bottom-4 right-4 z-50">
+                <button
+                  title='Dowload the resume'
+                  className="bg-yellow-500 dark:bg-yellow-400 text-black px-3 py-2 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-yellow-400 dark:hover:bg-yellow-300 transition hover:scale-105 cursor-pointer"
+                >
+                  <DownLoadIcon className="w-4 h-4" />
+                </button>
+            </motion.div>
           </Suspense>
         </>
       )}

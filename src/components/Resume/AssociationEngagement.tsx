@@ -1,0 +1,115 @@
+import { motion } from 'framer-motion'
+import { ChevronDownIcon } from '@/components/icons'
+import { useBreakpoints } from '@/lib/hooks/useBreakpoints'
+import { cn } from '@/lib/utils'
+import { TechBadge } from './TechBadge'
+
+interface AssociationEngagementProps {
+  year: string
+  company: string
+  type?: string
+  role: string
+  description: string
+  techs: string[]
+  expanded: boolean
+  onToggle: () => void
+  details?: {
+    context: string
+    tasks?: string[]
+    training?: string[]
+    env: string
+  }
+  subItem?: { title: string; description: string }
+  labels: {
+    mainTasks: string
+    moreTasks: string
+    training?: string
+    techEnv: string
+    technologies: string
+  }
+  isHighlighted?: boolean
+}
+
+export function AssociationEngagement({
+  year,
+  company,
+  type,
+  role,
+  description,
+  techs,
+  expanded,
+  onToggle,
+  details,
+  subItem,
+  isHighlighted = false,
+}: AssociationEngagementProps) {
+  const { isDesktop } = useBreakpoints()
+  const handleClick = () => {
+    if (isDesktop) {
+      onToggle()
+    }
+  }
+
+  return (
+    <motion.div
+      className="relative"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      whileHover={isHighlighted ? { scale: 1.02 } : {}}
+      transition={{ duration: 0.2 }}
+    >
+      <button
+        onClick={handleClick}
+        aria-expanded={details ? expanded : undefined}
+        className="w-full text-left group relative z-10 cursor-pointer"
+      >
+        <div
+          className={cn(
+            'flex items-start gap-4 py-3 rounded-lg px-3 -mx-3 transition-all duration-300',
+            isHighlighted
+              ? 'border-2 border-resume-primary/30 bg-resume-primary/5 hover:border-resume-primary/50 hover:shadow-md'
+              : 'hover:bg-resume-primary/5'
+          )}
+        >
+          <div className="w-20 flex-shrink-0">
+            <span className="text-sm font-bold text-resume-primary">{year}</span>
+          </div>
+
+          <div className="flex-1 min-w-0 relative">
+            {details && (
+              <motion.div
+                animate={{ rotate: expanded ? 180 : 0 }}
+                className="absolute top-0 right-0"
+              >
+                <ChevronDownIcon className="w-4 h-4 text-resume-primary" />
+              </motion.div>
+            )}
+            <div className="flex items-center gap-2 flex-wrap pr-6 md:pr-0">
+              <h3 className="text-sm font-semibold text-resume-text">{company}</h3>
+              {type && (
+                <span className="text-xs px-2 py-0.5 bg-resume-primary/10 text-resume-primary rounded">
+                  {type}
+                </span>
+              )}
+            </div>
+            <p className="text-xs text-resume-text-secondary mt-0.5">{role}</p>
+            <p className="text-xs text-resume-text-secondary/80 mt-1 line-clamp-2">{description}</p>
+
+            <div className="flex flex-wrap gap-1.5 mt-2">
+              {techs.map((tech) => (
+                <TechBadge key={tech} tech={tech} />
+              ))}
+            </div>
+
+            {subItem && (
+              <div className="mt-3 pl-3 border-l-2 border-resume-primary/20">
+                <p className="text-xs font-medium text-resume-text">{subItem.title}</p>
+                <p className="text-xs text-resume-text-secondary">{subItem.description}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </button>
+    </motion.div>
+  )
+}

@@ -1,4 +1,5 @@
 import type { ResumeConfig } from './types'
+
 const year = new Date().getFullYear();
 
 export const resumeConfig: ResumeConfig = {
@@ -79,6 +80,8 @@ export const resumeConfig: ResumeConfig = {
         { name: 'Python' },
         { name: 'TensorFlow' },
         { name: 'PyTorch' },
+        { name: 'OpenCV' },
+        { name: 'Keras' },
       ],
     },
     {
@@ -133,7 +136,7 @@ export const resumeConfig: ResumeConfig = {
     },
     {
       id: 'immo-mada',
-      company: { fr: 'Agence IMMO MADA Océa', en: 'IMMO MADA Océa Agency' },
+      company: { fr: 'Agence IMMO MADA Océa Toamasina', en: 'IMMO MADA Océa Agency Toamasina' },
       role: { fr: 'Lead Développeur', en: 'Lead Developer' },
       period: { fr: 'Avril à Juin 2025', en: 'April to June 2025' },
       description: {
@@ -144,7 +147,7 @@ export const resumeConfig: ResumeConfig = {
     },
     {
       id: 'formateur',
-      company: { fr: 'Centre de Formation Le Cercle', en: 'Le Cercle Training Center' },
+      company: { fr: 'Centre de Formation Le Cercle Toamasina', en: 'Le Cercle Training Center Toamasina' },
       role: { fr: 'Formateur en informatique bureautique', en: 'Office IT Trainer' },
       period: { fr: 'Mars 2024 – Janvier 2025', en: 'March 2024 – January 2025' },
       description: {
@@ -166,21 +169,50 @@ export const resumeConfig: ResumeConfig = {
     },
   ],
 
+  experiences_association: [
+    {
+      id: 'yes-tafita',
+      company: { fr: 'Association YES-TaFiTa à Toamasina', en: 'YES-TaFiTa Association in Toamasina' },
+      role: { fr: 'Membre de l\'association', en: 'Association Member' },
+      period: { fr: 'Janvier 2021 – présent', en: 'January 2021 – Present' },
+      description: {
+        fr: 'Gestion des ressources humaines et accompagnement des membres de l’association.',
+        en: 'Human resources management and support for association members.',
+      },
+      techs: ['Management', 'Communication', 'Organisation'],
+    },
+  ],
+
   education: [
+    {
+      school: { fr: 'Orange Digital Center Madagascar à Antananarivo', en: 'Orange Digital Center Madagascar in Antananarivo' },
+      degree: { fr: 'Formation en Computer Vision et modélisation de l’intelligence artificielle', en: 'Training in Computer Vision and Artificial Intelligence Modeling' },
+      period: 'Juin 2025',
+    },
     {
       school: { fr: 'Université de Toamasina', en: 'University of Toamasina' },
       degree: { fr: 'Master II en informatique imageries et Interactions', en: 'Master II in Computer Science, Imaging and Interactions' },
-      period: '2026',
-    },
-    {
-      school: { fr: 'Orange Digital Center Madagascar', en: 'Orange Digital Center Madagascar' },
-      degree: { fr: 'Formation en Computer Vision et IA', en: 'Training in Computer Vision and AI' },
       period: '2025',
     },
     {
       school: { fr: 'Université de Toamasina', en: 'University of Toamasina' },
       degree: { fr: 'Licence en Mathématiques informatiques et Application', en: 'Bachelor\'s Degree in Computer Mathematics and Application' },
       period: '2023',
+    },
+    {
+      school: { fr: 'Madagascar Initiatives for Digital à Antananarivo', en: 'Madagascar Initiatives for Digital in Antananarivo' },
+      degree: { fr: 'Formation en Open Data au cœur d’un plaidoyer efficace', en: 'Training in Open Data at the heart of effective advocacy' },
+      period: 'Septembre 2023',
+    },
+    {
+      school: { fr: 'Orange Digital Center Madagascar à Antananarivo', en: 'Orange Digital Center Madagascar in Antananarivo' },
+      degree: { fr: 'Formation en UX/UI Design', en: 'Training in UX/UI Design' },
+      period: 'Avril 2023',
+    },
+    {
+      school: { fr: 'Lycée Mananara Nord', en: 'Lycée Mananara Nord' },
+      degree: { fr: 'Baccalauréat de l’enseignement secondaire', en: 'High School Diploma' },
+      period: '2019',
     },
   ],
 
@@ -203,6 +235,24 @@ export const resumeConfig: ResumeConfig = {
       },
       techs: ['Vue.js', 'Tailwind CSS', 'Firebase'],
     },
+    {
+      id: 'peace-mobile',
+      title: { fr: 'PeaceMobile', en: 'PeaceMobile' },
+      description: {
+        fr: 'Design d’une application mobile pour vulgariser les notions de droits et de dignité humaine.',
+        en: 'Design of a mobile application to popularize concepts of human rights and dignity.',
+      },
+      techs: ['Figma', 'Adobe XD', 'UI/UX'],
+    },
+    {
+      id: 'vente-app',
+      title: { fr: 'Application web de vente', en: 'Sales Web Application' },
+      description: {
+        fr: 'Projet académique sur la création d’une application web de vente.',
+        en: 'Academic project on creating a sales web application.',
+      },
+      techs: ['Laravel', 'React', 'MySQL'],
+    },
   ],
 
   hobbies: [
@@ -223,6 +273,7 @@ export const resumeConfig: ResumeConfig = {
       education: { fr: 'FORMATION', en: 'EDUCATION' },
       projects: { fr: 'PROJETS', en: 'PROJECTS' },
       hobbies: { fr: 'LOISIRS', en: 'HOBBIES' },
+      experiences_association: { fr: 'Engagement associatif', en: 'Association Engagement' },
     },
     experience: {
       mainTasks: { fr: 'Missions principales :', en: 'Main tasks:' },
@@ -231,8 +282,10 @@ export const resumeConfig: ResumeConfig = {
       technologies: { fr: 'Technologies', en: 'Technologies' },
     },
     actions: {
-      clickHint: { fr: `© ${year} Kadafi.Ben. Tous droits réservés.`,
-       en: `© ${year} Kadafi.Ben. All rights reserved.` },
+      clickHint: {
+        fr: `© ${year} Kadafi.Ben. Tous droits réservés.`,
+        en: `© ${year} Kadafi.Ben. All rights reserved.`,
+      },
       switchTheme: { fr: 'Changer le thème', en: 'Toggle dark mode' },
       downloadPdf: { fr: 'Télécharger le PDF', en: 'Download PDF' },
     },
