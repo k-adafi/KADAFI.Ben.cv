@@ -7,7 +7,7 @@ import { EducationItem } from './EducationItem'
 
 export function MainContent() {
   const { resolve, resolveArray } = useTranslation()
-  const { personal, experiences, projects, education, labels } = resumeConfig
+  const { personal, experiences, projects, education, certifications, labels } = resumeConfig
   const [expandedExp, setExpandedExp] = useState<string | null>(null)
 
   const toggleExp = (id: string) => {
@@ -39,7 +39,7 @@ export function MainContent() {
 
       {/* Experiences */}
       <div className="relative">
-        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-6 pb-2 border-b border-resume-primary/20">
+        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-6 pb-2 border-b-2 border-resume-accent">
           {resolve(labels.sections.experience)}
         </h2>
         <div className="space-y-2">
@@ -82,7 +82,7 @@ export function MainContent() {
       {/* Projects */}
       {projects && projects.length > 0 && labels.sections.projects && (
         <div className="mt-8">
-          <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b border-resume-primary/20">
+          <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b-2 border-resume-accent">
             {resolve(labels.sections.projects)}
           </h2>
           <div className="space-y-1">
@@ -94,6 +94,7 @@ export function MainContent() {
                 techs={project.techs}
                 url={project.url}
                 github={project.github}
+                images={project.images}
               />
             ))}
           </div>
@@ -102,7 +103,7 @@ export function MainContent() {
 
       {/* Education */}
       <div className="mt-8">
-        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b border-resume-primary/20">
+        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b-2 border-resume-accent">
           {resolve(labels.sections.education)}
         </h2>
         <div className="space-y-4">
@@ -118,6 +119,27 @@ export function MainContent() {
           ))}
         </div>
       </div>
+
+      {/* Certifications */}
+      {certifications && certifications.length > 0 && labels.sections.certifications && (
+        <div className="mt-8">
+          <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b-2 border-resume-accent">
+            {resolve(labels.sections.certifications)}
+          </h2>
+          <div className="space-y-4">
+            {certifications.map((cert, i) => (
+              <EducationItem
+                key={`${resolve(cert.school)}-${resolve(cert.degree)}-${cert.period ?? i}`}
+                school={resolve(cert.school)}
+                degree={resolve(cert.degree)}
+                specialty={cert.specialty ? resolve(cert.specialty) : undefined}
+                period={cert.period}
+                logo={cert.logo}
+              />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

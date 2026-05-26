@@ -38,6 +38,8 @@ function ThemeVarsInjector({ children }: { children: React.ReactNode }) {
           --resume-primary-light: ${colors.primaryLight};
           --resume-sidebar-from: ${colors.sidebarLight};
           --resume-sidebar-to: ${colors.sidebarLightEnd};
+          --resume-accent: ${colors.accent};
+          --resume-accent-dark: ${colors.accentDark};
         }
         .dark {
           --resume-bg: ${colors.bgDark};
@@ -48,6 +50,8 @@ function ThemeVarsInjector({ children }: { children: React.ReactNode }) {
           --resume-primary-light: ${colors.primaryLightDark};
           --resume-sidebar-from: ${colors.sidebarDark};
           --resume-sidebar-to: ${colors.sidebarDarkEnd};
+          --resume-accent: ${colors.accentDark};
+          --resume-accent-dark: ${colors.accent};
         }
       `}</style>
       {children}
@@ -87,7 +91,6 @@ export default function App() {
       </LanguageProvider>
       {import.meta.env.DEV && (
         <>
-          <DevPresetSelector />
           <Suspense>
             <motion.div className="fixed bottom-4 right-4 z-50">
                 <button

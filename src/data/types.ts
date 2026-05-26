@@ -26,6 +26,7 @@ export interface SkillItem {
   name: string | LocalizedString
   color?: string
   level?: LocalizedString
+  percentage?: number
   details?: string
 }
 
@@ -84,6 +85,7 @@ export interface Project {
   techs: (TechName | (string & {}))[]
   url?: string
   github?: string
+  images?: string[]
 }
 
 // ===== EDUCATION =====
@@ -122,6 +124,8 @@ export interface ThemeColors {
   sidebarLightEnd: string
   sidebarDark: string
   sidebarDarkEnd: string
+  accent: string
+  accentDark: string
 }
 
 export type PresetName = 'minimal' | 'warm' | 'ocean' | 'forest' | 'slate' | 'lilac'
@@ -134,6 +138,7 @@ export interface ResumeLabels {
     skills: LocalizedString
     experience: LocalizedString
     education: LocalizedString
+    certifications?: LocalizedString
     projects?: LocalizedString
     hobbies?: LocalizedString
     experiences_association?: LocalizedString
@@ -177,6 +182,7 @@ export interface ResumeConfig {
   experiences: Experience[]
   experiences_association: ExperienceAssociation[]
   education: Education[]
+  certifications?: Education[]
   projects?: Project[]
   hobbies?: Hobby[]
   pdf?: {

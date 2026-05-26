@@ -23,9 +23,9 @@ export function ThemeToggle({ label }: ThemeToggleProps) {
         transition={{ duration: 0.2 }}
       >
         {isDark ? (
-          <SunIcon className="w-5 h-5 text-resume-primary" />
+          <SunIcon className="w-5 h-5 text-resume-accent" />
         ) : (
-          <MoonIcon className="w-5 h-5 text-resume-primary" />
+          <MoonIcon className="w-5 h-5 text-resume-accent" />
         )}
       </motion.div>
     </button>

@@ -41,7 +41,7 @@ export function PdfDownload() {
     <a
       href={assetUrl(resolvedPath)}
       download={resolvedPath.split('/').pop() ?? 'resume.pdf'}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-resume-primary/10 text-resume-primary hover:bg-resume-primary/20 transition-colors text-sm font-medium"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-resume-accent/10 text-resume-accent hover:bg-resume-accent/20 transition-colors text-sm font-medium"
     >
       <DownloadIcon className="w-4 h-4" />
       {downloadLabel}

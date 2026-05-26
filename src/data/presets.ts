@@ -18,6 +18,8 @@ export const presets: Record<PresetName, ThemeColors> = {
     sidebarLightEnd: '#ebebeb',
     sidebarDark: '#0f0f0f',
     sidebarDarkEnd: '#0a0a0a',
+    accent: '#eab308',
+    accentDark: '#fbbf24',
   },
   warm: {
     bg: '#faf6f1',
@@ -36,6 +38,8 @@ export const presets: Record<PresetName, ThemeColors> = {
     sidebarLightEnd: '#ebe4db',
     sidebarDark: '#150f0a',
     sidebarDarkEnd: '#0f0b08',
+    accent: '#8B5A2B',
+    accentDark: '#D4A574',
   },
   ocean: {
     bg: '#f5f8fa',
@@ -54,6 +58,8 @@ export const presets: Record<PresetName, ThemeColors> = {
     sidebarLightEnd: '#e2eaf0',
     sidebarDark: '#0d1520',
     sidebarDarkEnd: '#0a1018',
+    accent: '#1e6091',
+    accentDark: '#5aade4',
   },
   forest: {
     bg: '#f6f8f5',
@@ -72,6 +78,8 @@ export const presets: Record<PresetName, ThemeColors> = {
     sidebarLightEnd: '#e3eade',
     sidebarDark: '#0d120b',
     sidebarDarkEnd: '#0a0e09',
+    accent: '#3d6b4e',
+    accentDark: '#6db882',
   },
   slate: {
     bg: '#f4f5f7',
@@ -90,6 +98,8 @@ export const presets: Record<PresetName, ThemeColors> = {
     sidebarLightEnd: '#e2e4e8',
     sidebarDark: '#101115',
     sidebarDarkEnd: '#0c0d10',
+    accent: '#eab308',
+    accentDark: '#fbbf24',
   },
   lilac: {
     bg: '#f8f5fa',
@@ -108,5 +118,7 @@ export const presets: Record<PresetName, ThemeColors> = {
     sidebarLightEnd: '#e8e0f0',
     sidebarDark: '#120d18',
     sidebarDarkEnd: '#0e0a12',
+    accent: '#7c5295',
+    accentDark: '#b088d0',
   },
 }

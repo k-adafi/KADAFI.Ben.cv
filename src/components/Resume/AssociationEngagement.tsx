@@ -67,12 +67,12 @@ export function AssociationEngagement({
           className={cn(
             'flex items-start gap-4 py-3 rounded-lg px-3 -mx-3 transition-all duration-300',
             isHighlighted
-              ? 'border-2 border-resume-primary/30 bg-resume-primary/5 hover:border-resume-primary/50 hover:shadow-md'
-              : 'hover:bg-resume-primary/5'
+              ? 'border-2 border-resume-accent/30 bg-resume-accent/5 hover:border-resume-accent/50 hover:shadow-md'
+              : 'hover:bg-resume-accent/5'
           )}
         >
           <div className="w-20 flex-shrink-0">
-            <span className="text-sm font-bold text-resume-primary">{year}</span>
+            <span className="text-sm font-bold text-resume-accent">{year}</span>
           </div>
 
           <div className="flex-1 min-w-0 relative">
@@ -81,7 +81,7 @@ export function AssociationEngagement({
                 animate={{ rotate: expanded ? 180 : 0 }}
                 className="absolute top-0 right-0"
               >
-                <ChevronDownIcon className="w-4 h-4 text-resume-primary" />
+                <ChevronDownIcon className="w-4 h-4 text-resume-accent" />
               </motion.div>
             )}
             <div className="flex items-center gap-2 flex-wrap pr-6 md:pr-0">

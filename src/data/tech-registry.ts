@@ -156,7 +156,7 @@ const TECH_REGISTRY = {
   'Playwright': { color: '#2EAD33' },
   'Testing Library': { color: '#E33332' },
   'Mocha': { color: '#8D6748' },
-  'Selenium': { color: '#43B02A' },
+  'Stripe': { color: '#635BFF' },
 
   // ===== AI & Data =====
   'TensorFlow': { color: '#FF6F00' },
@@ -165,8 +165,24 @@ const TECH_REGISTRY = {
   'LangChain': { color: '#1C3C3C' },
   'Pandas': { color: '#150458' },
   'NumPy': { color: '#013243' },
+  'OpenCV': { color: '#5C3EE8' },
+  'Keras': { color: '#D00000' },
+  'scikit-learn': { color: '#F7931E' },
+  'Matplotlib': { color: '#11557c' },
+  'YOLOv11': { color: '#00FFFF' },
+  'MobileNetV3Small': { color: '#FFD700' },
+  'DeepSORT': { color: '#7FFF00' },
+
+  // ===== Design =====
+  'Figma': { color: '#F24E1E' },
+  'Adobe XD': { color: '#FF61F6' },
+
+  // ===== Tools =====
+  'Google Colab': { color: '#F9AB00' },
+  'Kaggle': { color: '#20BEFF' },
 
   // ===== CMS & Others =====
+
   'WordPress': { color: '#21759B' },
   'Strapi': { color: '#4945FF' },
   'Sanity': { color: '#F03E2F' },

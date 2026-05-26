@@ -96,16 +96,33 @@ export function Sidebar() {
         </div>
       </SidebarSection>
 
-      {/* Skills */}
-      <SidebarSection title={resolve(labels.sections.skills)}>
-        <div className="space-y-4">
           {skills.map((category, i) => (
-            <SkillCategory key={`${resolve(category.title)}-${i}`} title={resolve(category.title)}>
+            <SidebarSection key={`${resolve(category.title)}-${i}`} title={resolve(category.title)}>
               {category.type === 'badges' && (
-                <div className="flex flex-wrap gap-1.5">
-                  {category.items.map((item) => {
+                <div className="space-y-3">
+                  {category.items.map((item, j) => {
                     const techName = typeof item.name === 'string' ? item.name : Object.values(item.name)[0]
-                    return <TechBadge key={techName} tech={techName} color={item.color} />
+                    return (
+                      <div key={`${techName}-${j}`}>
+                        <div className="flex justify-between items-center mb-1">
+                          <span className="text-xs font-medium text-resume-text">{techName}</span>
+                          {item.percentage && (
+                            <span className="text-[10px] font-bold text-resume-accent">{item.percentage}%</span>
+                          )}
+                        </div>
+                        {item.percentage && (
+                          <div className="w-full bg-resume-primary/10 rounded-full h-1 overflow-hidden">
+                            <motion.div
+                              className="bg-resume-accent h-full rounded-full"
+                              initial={{ width: 0 }}
+                              whileInView={{ width: `${item.percentage}%` }}
+                              transition={{ duration: 1, ease: 'easeOut' }}
+                              viewport={{ once: true }}
+                            />
+                          </div>
+                        )}
+                      </div>
+                    )
                   })}
                 </div>
               )}
@@ -117,26 +134,24 @@ export function Sidebar() {
                 </p>
               )}
               {category.type === 'languages' && (
-                <div className="flex items-center gap-3 text-sm flex-wrap">
+                <div className="space-y-2">
                   {category.items.map((item, j) => {
                     const name = typeof item.name === 'string' ? item.name : resolve(item.name)
                     return (
-                      <span key={`${name}-${j}`} className="flex items-center gap-1">
-                        <span className="text-resume-text-secondary">
-                          {name} {item.level ? resolve(item.level) : ''}
-                          {item.details && (
-                            <span className="text-xs opacity-70 ml-1">{item.details}</span>
-                          )}
-                        </span>
-                      </span>
+                      <div key={`${name}-${j}`}>
+                        <p className="text-xs font-medium text-resume-text">
+                          {name} <span className="text-resume-text-secondary font-normal">{item.level ? resolve(item.level) : ''}</span>
+                        </p>
+                        {item.details && (
+                          <p className="text-[10px] text-resume-text-secondary opacity-70 italic">{item.details}</p>
+                        )}
+                      </div>
                     )
                   })}
                 </div>
               )}
-            </SkillCategory>
+            </SidebarSection>
           ))}
-        </div>
-      </SidebarSection>
 
       {/* AssociationEngagement */}
       {experiences_association && experiences_association.length > 0 && labels.sections.experiences_association && (

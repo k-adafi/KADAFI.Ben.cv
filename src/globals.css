@@ -9,6 +9,8 @@
   --color-resume-primary-light: var(--resume-primary-light);
   --color-resume-sidebar-from: var(--resume-sidebar-from);
   --color-resume-sidebar-to: var(--resume-sidebar-to);
+  --color-resume-accent: var(--resume-accent);
+  --color-resume-accent-dark: var(--resume-accent-dark);
 }
 
 @variant dark (&:where(.dark, .dark *));
