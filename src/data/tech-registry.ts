@@ -156,7 +156,6 @@ const TECH_REGISTRY = {
   'Playwright': { color: '#2EAD33' },
   'Testing Library': { color: '#E33332' },
   'Mocha': { color: '#8D6748' },
-  'Stripe': { color: '#635BFF' },
 
   // ===== AI & Data =====
   'TensorFlow': { color: '#FF6F00' },
@@ -174,7 +173,6 @@ const TECH_REGISTRY = {
   'DeepSORT': { color: '#7FFF00' },
 
   // ===== Design =====
-  'Figma': { color: '#F24E1E' },
   'Adobe XD': { color: '#FF61F6' },
 
   // ===== Tools =====

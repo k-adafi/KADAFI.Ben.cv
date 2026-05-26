@@ -6,8 +6,6 @@ import { assetUrl } from '@/lib/utils'
 import { detectedAssets } from 'virtual:detected-assets'
 import { SidebarSection } from './SidebarSection'
 import { ContactItem } from './ContactItem'
-import { SkillCategory } from './SkillCategory'
-import { TechBadge } from './TechBadge'
 
 const PHOTO_ANIMATION_DURATION = 0.8
 
