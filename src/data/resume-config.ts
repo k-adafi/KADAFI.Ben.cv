@@ -6,7 +6,7 @@ export const resumeConfig: ResumeConfig = {
   // ===== PERSONAL INFO =====
   personal: {
     name: 'KADAFI Ben',
-    photo: '/images/photo.jpg',
+    photo: '/images/KADAFI1.jpeg',
     photoBackEmoji: '👨‍💻',
     title: {
       fr: 'Ingénieur logiciel et Développeur full stack',
@@ -109,6 +109,9 @@ export const resumeConfig: ResumeConfig = {
         { name: 'PHPStorm' },
         { name: 'Google Colab' },
         { name: 'Kaggle' },
+        { name: 'Bitrix24' },
+        { name: 'Trello' },
+        { name: 'LucidChart' },
       ],
     },
   ],
