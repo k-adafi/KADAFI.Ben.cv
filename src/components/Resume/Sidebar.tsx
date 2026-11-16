@@ -6,6 +6,7 @@ import { assetUrl } from '@/lib/utils'
 import { detectedAssets } from 'virtual:detected-assets'
 import { SidebarSection } from './SidebarSection'
 import { ContactItem } from './ContactItem'
+import { TechBadge } from './TechBadge'
 
 const PHOTO_ANIMATION_DURATION = 0.8
 
@@ -96,7 +97,15 @@ export function Sidebar() {
 
           {skills.map((category, i) => (
             <SidebarSection key={`${resolve(category.title)}-${i}`} title={resolve(category.title)}>
-              {category.type === 'badges' && (
+              {category.type === 'badges' && category.items.every((item) => !item.percentage) && (
+                <div className="flex flex-wrap gap-1.5">
+                  {category.items.map((item, j) => {
+                    const techName = typeof item.name === 'string' ? item.name : resolve(item.name)
+                    return <TechBadge key={`${techName}-${j}`} tech={techName} color={item.color} />
+                  })}
+                </div>
+              )}
+              {category.type === 'badges' && category.items.some((item) => item.percentage) && (
                 <div className="space-y-3">
                   {category.items.map((item, j) => {
                     const techName = typeof item.name === 'string' ? item.name : Object.values(item.name)[0]

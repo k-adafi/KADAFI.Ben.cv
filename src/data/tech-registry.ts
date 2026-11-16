@@ -197,6 +197,22 @@ const TECH_REGISTRY = {
   'JSP': { color: '#007396' },
   'JSF': { color: '#007396' },
   'jQuery': { color: '#0769AD' },
+
+  // ===== Added for this resume =====
+  'Vue 3': { color: '#4FC08D' },
+  'Inertia.js': { color: '#9553E9' },
+  'TanStack Query': { color: '#FF4154' },
+  'Zustand': { color: '#443E38' },
+  'PostGIS': { color: '#336791' },
+  'Mapbox': { color: '#4264FB' },
+  'TensorFlow Lite': { color: '#FF6F00' },
+  'MobileNetV3': { color: '#FFD700' },
+  'Android': { color: '#3DDC84' },
+  'AI coding agents': { color: '#0D9488' },
+  'Spatie Permission': { color: '#197593' },
+  'Jitsi': { color: '#1D76BA' },
+  'n8n': { color: '#EA4B71' },
+  'TinyMCE': { color: '#335DFF' },
 } as const satisfies Record<string, { color: string }>
 
 export type TechName = keyof typeof TECH_REGISTRY
