@@ -208,7 +208,7 @@ const TECH_REGISTRY = {
   'TensorFlow Lite': { color: '#FF6F00' },
   'MobileNetV3': { color: '#FFD700' },
   'Android': { color: '#3DDC84' },
-  'AI coding agents': { color: '#0D9488' },
+  'Claude Code': { color: '#D97757' },
   'Spatie Permission': { color: '#197593' },
   'Jitsi': { color: '#1D76BA' },
   'n8n': { color: '#EA4B71' },

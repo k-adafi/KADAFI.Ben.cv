@@ -13,8 +13,8 @@ export const resumeConfig: ResumeConfig = {
       en: 'Full-Stack TypeScript Developer',
     },
     subtitle: {
-      fr: "Développeur Full-Stack avec plus de 2 ans d'expérience professionnelle sur des applications web et mobiles (Laravel, Vue 3, React, React Native, PostgreSQL), du recueil des besoins à la mise en production. Je travaille au quotidien avec des agents de programmation IA en développement assisté par IA, pas en vibe coding : je cadre, je relis chaque diff et je reste responsable de l'architecture, de la sécurité des accès et de la qualité du code. Expérience concrète en IA et vision par ordinateur acquise en Master d'Informatique. Habitué au travail à distance et asynchrone : tickets, revues de code, reporting écrit.",
-      en: "Full-Stack Developer with 2+ years of professional experience building web and mobile applications (Laravel, Vue 3, React, React Native, PostgreSQL), from requirements to production. I work with AI coding agents every day — AI-assisted development, not vibe coding: I frame the work, review every diff and stay accountable for architecture, access security and code quality. Hands-on AI and computer vision experience from a Master's in Computer Science. Used to remote, async collaboration through tickets, code reviews and written reporting.",
+      fr: "Développeur Full-Stack avec plus de 2 ans d'expérience professionnelle sur des applications web et mobiles (TypeScript, React, Vue 3, Laravel, NestJS, PostgreSQL), du recueil des besoins à la mise en production. Au quotidien, j'utilise Claude Code en développement assisté par IA pour être plus rapide sur l'écriture du code. Exigeant sur l'architecture, la sécurité des accès et la qualité du code. Expérience concrète en IA et vision par ordinateur acquise en Master d'Informatique. Habitué au travail à distance et asynchrone : tickets, revues de code, reporting écrit.",
+      en: "Full-Stack Developer with 2+ years of professional experience building web and mobile applications (TypeScript, React, Vue 3, Laravel, NestJS, PostgreSQL), from requirements to production. Every day I use Claude Code for AI-assisted development, to write code faster. Focused on clean architecture, access security and code quality. Hands-on AI and computer vision experience from a Master's in Computer Science. Used to remote, async collaboration through tickets, code reviews and written reporting.",
     },
     location: 'Toamasina, Madagascar (UTC+3)',
   },
@@ -23,7 +23,7 @@ export const resumeConfig: ResumeConfig = {
   seo: {
     title: 'KADAFI Ben — CV · Développeur Full-Stack TypeScript, React, Laravel',
     description:
-      'CV interactif de KADAFI Ben, développeur full-stack (TypeScript, React, Vue 3, Laravel, PostgreSQL / PostGIS, React Native), en développement assisté par IA.',
+      'CV interactif de KADAFI Ben, développeur full-stack (TypeScript, React, Vue 3, Laravel, PostgreSQL / PostGIS, React Native, NestJS).',
   },
 
   // ===== LANGUAGES =====
@@ -101,10 +101,10 @@ export const resumeConfig: ResumeConfig = {
       ],
     },
     {
-      title: { fr: 'Méthode & outils', en: 'Workflow & tools' },
+      title: { fr: 'Outils & pratiques', en: 'Tools & practices' },
       type: 'badges',
       items: [
-        { name: 'AI coding agents' },
+        { name: 'Claude Code' },
         { name: 'Git' },
         { name: 'GitHub' },
         { name: 'Spatie Permission' },
@@ -139,14 +139,12 @@ export const resumeConfig: ResumeConfig = {
             "Pilotage du site institutionnel et du CMS multilingue (Laravel, Inertia.js, Vue 3, Tailwind CSS), avec des composants Vue réutilisables : DataTable à colonnes fixes, éditeur TinyMCE, thèmes.",
             "Mise en place du contrôle d'accès par rôles (Spatie Permission) sur toute l'administration.",
             'Revues de code et audits qualité : doublons, requêtes N+1 et conflits de logique métier corrigés avant livraison.',
-            'Développement assisté par IA avec un agent de programmation : cadrage, plan, relecture de chaque diff, vérification.',
           ],
           en: [
             'AfroJourney: mobile (React Native) and web (React) apps with TanStack Query and Zustand, NestJS API; PostgreSQL / PostGIS geospatial queries for the interactive map.',
             "Led the multilingual corporate website and CMS (Laravel, Inertia.js, Vue 3, Tailwind CSS), including reusable Vue components: sticky-column DataTable, TinyMCE editor, theming.",
             'Implemented role-based access control with Spatie Permission across the whole admin area.',
             'Ran code reviews and quality audits, fixing duplicate data, N+1 queries and business-logic conflicts before release.',
-            'AI-assisted development with a coding agent: framing, planning, reviewing every diff, verifying.',
           ],
         },
         env: {
